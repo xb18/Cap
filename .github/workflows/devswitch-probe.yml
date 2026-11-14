@@ -184,3 +184,68 @@ jobs:
             ${{ runner.temp }}/rec/*.log
             ${{ runner.temp }}/rec/*.csv
             ${{ runner.temp }}/rec/status
+
+  linux-camera:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@1.88.0
+      - uses: ./.github/actions/setup-rust-cache
+        with:
+          target: x86_64-unknown-linux-gnu
+          prefix-key: v1-rust-devswitch-probe-linux
+          save-cache: "false"
+      - uses: ./.github/actions/install-desktop-deps
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Native dependencies
+        env:
+          RUST_TARGET_TRIPLE: x86_64-unknown-linux-gnu
+        run: node scripts/setup.js
+      - name: Build camera probe
+        run: |
+          cp probe/devswitch-camera-probe.rs crates/recording/examples/
+          cargo build -p cap-recording --example devswitch-camera-probe
+      - name: Two loopback cameras and a display
+        run: |
+          set -euo pipefail
+          if ! sudo modprobe videodev 2>/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq "linux-modules-extra-$(uname -r)" >/dev/null
+            sudo modprobe videodev
+          fi
+          sudo apt-get install -y -qq "linux-headers-$(uname -r)" v4l2loopback-dkms xvfb ffmpeg >/dev/null
+          sudo modprobe v4l2loopback devices=2 video_nr=42,43 card_label="Cap Test Camera A","Cap Test Camera B" exclusive_caps=1,1
+          sudo chmod 666 /dev/video42 /dev/video43
+          nohup Xvfb :78 -screen 0 1920x1080x24 >/dev/null 2>&1 &
+          nohup ffmpeg -nostdin -re -f lavfi -i testsrc=size=640x480:rate=30 -pix_fmt yuyv422 -f v4l2 /dev/video42 > "$RUNNER_TEMP/feed-a.log" 2>&1 &
+          nohup ffmpeg -nostdin -re -f lavfi -i testsrc2=size=1280x720:rate=30 -pix_fmt yuyv422 -f v4l2 /dev/video43 > "$RUNNER_TEMP/feed-b.log" 2>&1 &
+          echo $! > "$RUNNER_TEMP/feed-b.pid"
+          sleep 3
+      - name: Record, switch camera, unplug and replug
+        env:
+          DISPLAY: ":78"
+        run: |
+          set -uo pipefail
+          out="$RUNNER_TEMP/camera-rec"
+          ( sleep 26; kill "$(cat "$RUNNER_TEMP/feed-b.pid")"; echo "camera B feeder stopped"
+            sleep 8
+            nohup ffmpeg -nostdin -re -f lavfi -i testsrc2=size=1280x720:rate=30 -pix_fmt yuyv422 -f v4l2 /dev/video43 > "$RUNNER_TEMP/feed-b2.log" 2>&1 &
+            echo "camera B feeder restarted" ) &
+          target/debug/examples/devswitch-camera-probe "$out" 2>&1 | tee "$RUNNER_TEMP/camera-probe.log" | grep -E "PROBE|ERROR|panicked"
+          wait
+          for seg in "$out"/content/segments/segment-*; do
+            echo "--- $(basename "$seg")"
+            ls "$seg"
+            cam="$seg/camera.mp4"
+            if [ ! -f "$cam" ] && [ -f "$seg/camera/init.mp4" ]; then
+              cam="$seg/joined-camera.mp4"
+              cat "$seg/camera/init.mp4" $(ls "$seg"/camera/*.m4s | sort -V) > "$cam"
+            fi
+            [ -f "$cam" ] || continue
+            ffprobe -v error -select_streams v:0 -count_frames -show_entries stream=width,height,nb_read_frames:format=duration -of compact "$cam"
+            ffprobe -v error -select_streams v:0 -show_entries frame=pts_time -of csv=p=0 "$cam" \
+              | awk -F, 'NR>1 && $1-p>0.5 {printf "gap %.2fs at %.2fs\n", $1-p, p} {p=$1}'
+          done
