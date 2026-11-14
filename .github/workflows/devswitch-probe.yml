@@ -149,7 +149,12 @@ jobs:
                 audio=$(ls "$seg"/audio-input.* 2>/dev/null | head -1)
                 [ -n "$audio" ] || continue
                 echo "--- $(basename "$seg")"
-                "$B/av-sync-check" --video "$seg/display.mp4" --audio "$audio" --csv "$OUT/$name-$(basename "$seg").csv" 2>&1 | tail -14
+                segvideo="$seg/display.mp4"
+                if [ ! -f "$segvideo" ] && [ -f "$seg/display/init.mp4" ]; then
+                  segvideo="$seg/joined-video.mp4"
+                  cat "$seg/display/init.mp4" $(ls "$seg"/display/*.m4s | sort -V) > "$segvideo"
+                fi
+                "$B/av-sync-check" --video "$segvideo" --audio "$audio" --flash-frac 0.3 --csv "$OUT/$name-$(basename "$seg").csv" 2>&1 | tail -14
               done
             else
               video="$dir/joined-video.mp4"; audio="$dir/joined-audio.mp4"
@@ -163,10 +168,10 @@ jobs:
               if [ -n "$ainit" ]; then
                 cat "$ainit" $(ls "$(dirname "$ainit")"/*.m4s | sort -V) > "$audio"
                 echo "--- video $vinit audio $ainit"
-                "$B/av-sync-check" --video "$video" --audio "$audio" --csv "$OUT/$name.csv" 2>&1 | tail -14
+                "$B/av-sync-check" --video "$video" --audio "$audio" --flash-frac 0.3 --csv "$OUT/$name.csv" 2>&1 | tail -14
               else
                 echo "--- $video (muxed audio)"
-                "$B/av-sync-check" --video "$video" --csv "$OUT/$name.csv" 2>&1 | tail -14
+                "$B/av-sync-check" --video "$video" --flash-frac 0.3 --csv "$OUT/$name.csv" 2>&1 | tail -14
               fi
             fi
           done

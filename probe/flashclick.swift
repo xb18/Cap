@@ -53,7 +53,7 @@ Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { timer in
     window.backgroundColor = .white
     window.display()
     player.scheduleBuffer(click, at: nil, options: [], completionHandler: nil)
-    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
         window.backgroundColor = .black
         window.display()
     }
