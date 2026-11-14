@@ -234,8 +234,12 @@ jobs:
             sleep 8
             nohup ffmpeg -nostdin -re -f lavfi -i testsrc2=size=1280x720:rate=30 -pix_fmt yuyv422 -f v4l2 /dev/video43 > "$RUNNER_TEMP/feed-b2.log" 2>&1 &
             echo "camera B feeder restarted" ) &
-          target/debug/examples/devswitch-camera-probe "$out" 2>&1 | tee "$RUNNER_TEMP/camera-probe.log" | grep -E "PROBE|ERROR|panicked"
+          target/debug/examples/devswitch-camera-probe "$out" > "$RUNNER_TEMP/camera-probe.log" 2>&1
+          echo "probe exit $?"
           wait
+          grep -E "PROBE|ERROR|panicked|error" "$RUNNER_TEMP/camera-probe.log" | head -40
+          tail -15 "$RUNNER_TEMP/camera-probe.log"
+          v4l2-ctl --list-devices 2>/dev/null || ls -la /dev/video*
           for seg in "$out"/content/segments/segment-*; do
             echo "--- $(basename "$seg")"
             ls "$seg"

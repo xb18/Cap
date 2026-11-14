@@ -1,5 +1,6 @@
 import AVFoundation
 import AppKit
+import QuartzCore
 
 // flashclick <seconds> [interval]
 // Full-screen black window that flashes white and plays a click on the
@@ -20,8 +21,22 @@ window.backgroundColor = .black
 window.isOpaque = true
 window.ignoresMouseEvents = true
 window.collectionBehavior = [.canJoinAllSpaces, .stationary]
+let view = NSView(frame: NSRect(origin: .zero, size: screen.frame.size))
+view.wantsLayer = true
+view.layer?.backgroundColor = NSColor.black.cgColor
+window.contentView = view
+app.setActivationPolicy(.regular)
+app.activate(ignoringOtherApps: true)
 window.makeKeyAndOrderFront(nil)
 window.orderFrontRegardless()
+
+func paint(_ color: NSColor) {
+    CATransaction.begin()
+    CATransaction.setDisableActions(true)
+    view.layer?.backgroundColor = color.cgColor
+    CATransaction.commit()
+    CATransaction.flush()
+}
 
 let engine = AVAudioEngine()
 let player = AVAudioPlayerNode()
@@ -50,12 +65,10 @@ Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { timer in
         exit(0)
     }
     flashes += 1
-    window.backgroundColor = .white
-    window.display()
+    paint(.white)
     player.scheduleBuffer(click, at: nil, options: [], completionHandler: nil)
     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-        window.backgroundColor = .black
-        window.display()
+        paint(.black)
     }
 }
 app.run()
