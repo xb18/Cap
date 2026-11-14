@@ -1,0 +1,1038 @@
+{
+  "aspectRatio": null,
+  "background": {
+    "source": {
+      "type": "color",
+      "value": [
+        255,
+        255,
+        255
+      ],
+      "alpha": 255
+    },
+    "blur": 0.0,
+    "padding": 0.0,
+    "rounding": 0.0,
+    "roundingType": "squircle",
+    "inset": 0,
+    "crop": null,
+    "displayPosition": null,
+    "shadow": 73.6,
+    "advancedShadow": {
+      "size": 14.4,
+      "opacity": 68.1,
+      "blur": 3.8
+    },
+    "border": null,
+    "frame": null,
+    "notch": null
+  },
+  "camera": {
+    "hide": false,
+    "mirror": false,
+    "position": {
+      "x": "right",
+      "y": "bottom"
+    },
+    "manualPosition": null,
+    "size": 30.0,
+    "zoomSize": 60.0,
+    "rounding": 100.0,
+    "shadow": 62.5,
+    "advancedShadow": {
+      "size": 33.9,
+      "opacity": 44.2,
+      "blur": 10.5
+    },
+    "shape": "square",
+    "roundingType": "squircle",
+    "scaleDuringZoom": 0.7,
+    "backgroundBlur": {
+      "mode": "off"
+    }
+  },
+  "audio": {
+    "mute": false,
+    "improve": false,
+    "isolation": "balanced",
+    "micVolumeDb": 0.0,
+    "micStereoMode": "stereo",
+    "systemVolumeDb": 0.0
+  },
+  "cursor": {
+    "hide": false,
+    "hideWhenIdle": false,
+    "hideWhenIdleDelay": 2.0,
+    "size": 100,
+    "type": "auto",
+    "animationStyle": "mellow",
+    "tension": 470.0,
+    "mass": 3.0,
+    "friction": 70.0,
+    "raw": false,
+    "motionBlur": 1.0,
+    "useSvg": true,
+    "rotationAmount": 0.15,
+    "baseRotation": 0.0,
+    "clickSpring": null,
+    "stopMovementInLastSeconds": null,
+    "ripple": {
+      "enabled": false,
+      "color": [
+        71,
+        133,
+        255
+      ],
+      "strength": 0.7,
+      "size": 1.0,
+      "duration": 0.6
+    }
+  },
+  "hotkeys": {
+    "show": false
+  },
+  "timeline": {
+    "segments": [
+      {
+        "recordingSegment": 0,
+        "timescale": 1.0,
+        "start": 0.0,
+        "end": 52.298417,
+        "name": null
+      }
+    ],
+    "zoomSegments": [],
+    "sceneSegments": [],
+    "maskSegments": [],
+    "textSegments": [],
+    "captionSegments": [
+      {
+        "id": "segment-0",
+        "start": 0.4000000059604645,
+        "end": 4.800000190734863,
+        "text": "Welcome to the quarterly product update.",
+        "words": [
+          {
+            "text": "Welcome",
+            "start": 0.4,
+            "end": 1.122
+          },
+          {
+            "text": "to",
+            "start": 1.182,
+            "end": 1.731
+          },
+          {
+            "text": "the",
+            "start": 1.791,
+            "end": 2.342
+          },
+          {
+            "text": "quarterly",
+            "start": 2.402,
+            "end": 3.178
+          },
+          {
+            "text": "product",
+            "start": 3.238,
+            "end": 3.956
+          },
+          {
+            "text": "update.",
+            "start": 4.016,
+            "end": 4.8
+          }
+        ],
+        "fadeDurationOverride": null,
+        "lingerDurationOverride": null,
+        "positionOverride": null,
+        "colorOverride": null,
+        "backgroundColorOverride": null,
+        "fontSizeOverride": null
+      },
+      {
+        "id": "segment-1",
+        "start": 5.349999904632568,
+        "end": 9.118000030517578,
+        "text": "Today we will look at three",
+        "words": [
+          {
+            "text": "Today",
+            "start": 5.35,
+            "end": 6.035
+          },
+          {
+            "text": "we",
+            "start": 6.095,
+            "end": 6.631
+          },
+          {
+            "text": "will",
+            "start": 6.691,
+            "end": 7.216
+          },
+          {
+            "text": "look",
+            "start": 7.276,
+            "end": 7.861
+          },
+          {
+            "text": "at",
+            "start": 7.921,
+            "end": 8.451
+          },
+          {
+            "text": "three",
+            "start": 8.511,
+            "end": 9.118
+          }
+        ],
+        "fadeDurationOverride": null,
+        "lingerDurationOverride": null,
+        "positionOverride": null,
+        "colorOverride": null,
+        "backgroundColorOverride": null,
+        "fontSizeOverride": null
+      },
+      {
+        "id": "segment-2",
+        "start": 9.178000450134277,
+        "end": 9.842000007629395,
+        "text": "things.",
+        "words": [
+          {
+            "text": "things.",
+            "start": 9.178,
+            "end": 9.842
+          }
+        ],
+        "fadeDurationOverride": null,
+        "lingerDurationOverride": null,
+        "positionOverride": null,
+        "colorOverride": null,
+        "backgroundColorOverride": null,
+        "fontSizeOverride": null
+      },
+      {
+        "id": "segment-3",
+        "start": 13.842000007629395,
+        "end": 18.132999420166016,
+        "text": "First, the new editor makes trimming",
+        "words": [
+          {
+            "text": "First,",
+            "start": 13.842,
+            "end": 14.552
+          },
+          {
+            "text": "the",
+            "start": 14.802,
+            "end": 15.354
+          },
+          {
+            "text": "new",
+            "start": 15.414,
+            "end": 15.978
+          },
+          {
+            "text": "editor",
+            "start": 16.038,
+            "end": 16.662
+          },
+          {
+            "text": "makes",
+            "start": 16.722,
+            "end": 17.446
+          },
+          {
+            "text": "trimming",
+            "start": 17.506,
+            "end": 18.133
+          }
+        ],
+        "fadeDurationOverride": null,
+        "lingerDurationOverride": null,
+        "positionOverride": null,
+        "colorOverride": null,
+        "backgroundColorOverride": null,
+        "fontSizeOverride": null
+      },
+      {
+        "id": "segment-4",
+        "start": 18.19300079345703,
+        "end": 22.268999099731445,
+        "text": "a recording as easy as editing",
+        "words": [
+          {
+            "text": "a",
+            "start": 18.193,
+            "end": 18.701
+          },
+          {
+            "text": "recording",
+            "start": 18.761,
+            "end": 19.593
+          },
+          {
+            "text": "as",
+            "start": 19.653,
+            "end": 20.241
+          },
+          {
+            "text": "easy",
+            "start": 20.301,
+            "end": 20.902
+          },
+          {
+            "text": "as",
+            "start": 20.962,
+            "end": 21.551
+          },
+          {
+            "text": "editing",
+            "start": 21.611,
+            "end": 22.269
+          }
+        ],
+        "fadeDurationOverride": null,
+        "lingerDurationOverride": null,
+        "positionOverride": null,
+        "colorOverride": null,
+        "backgroundColorOverride": null,
+        "fontSizeOverride": null
+      },
+      {
+        "id": "segment-5",
+        "start": 22.32900047302246,
+        "end": 23.68000030517578,
+        "text": "a document.",
+        "words": [
+          {
+            "text": "a",
+            "start": 22.329,
+            "end": 22.836
+          },
+          {
+            "text": "document.",
+            "start": 22.896,
+            "end": 23.68
+          }
+        ],
+        "fadeDurationOverride": null,
+        "lingerDurationOverride": null,
+        "positionOverride": null,
+        "colorOverride": null,
+        "backgroundColorOverride": null,
+        "fontSizeOverride": null
+      },
+      {
+        "id": "segment-6",
+        "start": 24.229999542236328,
+        "end": 29.0310001373291,
+        "text": "Second, um, captions now export as",
+        "words": [
+          {
+            "text": "Second,",
+            "start": 24.23,
+            "end": 24.976
+          },
+          {
+            "text": "um,",
+            "start": 25.226,
+            "end": 25.733
+          },
+          {
+            "text": "captions",
+            "start": 25.983,
+            "end": 26.807
+          },
+          {
+            "text": "now",
+            "start": 26.867,
+            "end": 27.455
+          },
+          {
+            "text": "export",
+            "start": 27.515,
+            "end": 28.382
+          },
+          {
+            "text": "as",
+            "start": 28.442,
+            "end": 29.031
+          }
+        ],
+        "fadeDurationOverride": null,
+        "lingerDurationOverride": null,
+        "positionOverride": null,
+        "colorOverride": null,
+        "backgroundColorOverride": null,
+        "fontSizeOverride": null
+      },
+      {
+        "id": "segment-7",
+        "start": 29.090999603271484,
+        "end": 33.72100067138672,
+        "text": "subtitle files for YouTube and Vimeo.",
+        "words": [
+          {
+            "text": "subtitle",
+            "start": 29.091,
+            "end": 29.988
+          },
+          {
+            "text": "files",
+            "start": 30.048,
+            "end": 30.897
+          },
+          {
+            "text": "for",
+            "start": 30.957,
+            "end": 31.539
+          },
+          {
+            "text": "YouTube",
+            "start": 31.599,
+            "end": 32.392
+          },
+          {
+            "text": "and",
+            "start": 32.452,
+            "end": 33.006
+          },
+          {
+            "text": "Vimeo.",
+            "start": 33.066,
+            "end": 33.721
+          }
+        ],
+        "fadeDurationOverride": null,
+        "lingerDurationOverride": null,
+        "positionOverride": null,
+        "colorOverride": null,
+        "backgroundColorOverride": null,
+        "fontSizeOverride": null
+      },
+      {
+        "id": "segment-8",
+        "start": 34.270999908447266,
+        "end": 38.645999908447266,
+        "text": "Third, the transcript lets you fix",
+        "words": [
+          {
+            "text": "Third,",
+            "start": 34.271,
+            "end": 34.831
+          },
+          {
+            "text": "the",
+            "start": 35.081,
+            "end": 35.632
+          },
+          {
+            "text": "transcript",
+            "start": 35.692,
+            "end": 36.61
+          },
+          {
+            "text": "lets",
+            "start": 36.67,
+            "end": 37.347
+          },
+          {
+            "text": "you",
+            "start": 37.407,
+            "end": 37.9
+          },
+          {
+            "text": "fix",
+            "start": 37.96,
+            "end": 38.646
+          }
+        ],
+        "fadeDurationOverride": null,
+        "lingerDurationOverride": null,
+        "positionOverride": null,
+        "colorOverride": null,
+        "backgroundColorOverride": null,
+        "fontSizeOverride": null
+      },
+      {
+        "id": "segment-9",
+        "start": 38.70600128173828,
+        "end": 41.965999603271484,
+        "text": "any word the model mishurd.",
+        "words": [
+          {
+            "text": "any",
+            "start": 38.706,
+            "end": 39.248
+          },
+          {
+            "text": "word",
+            "start": 39.308,
+            "end": 39.868
+          },
+          {
+            "text": "the",
+            "start": 39.928,
+            "end": 40.48
+          },
+          {
+            "text": "model",
+            "start": 40.54,
+            "end": 41.159
+          },
+          {
+            "text": "mishurd.",
+            "start": 41.219,
+            "end": 41.966
+          }
+        ],
+        "fadeDurationOverride": null,
+        "lingerDurationOverride": null,
+        "positionOverride": null,
+        "colorOverride": null,
+        "backgroundColorOverride": null,
+        "fontSizeOverride": null
+      },
+      {
+        "id": "segment-10",
+        "start": 42.51599884033203,
+        "end": 46.720001220703125,
+        "text": "Thanks for watching, and see you",
+        "words": [
+          {
+            "text": "Thanks",
+            "start": 42.516,
+            "end": 43.297
+          },
+          {
+            "text": "for",
+            "start": 43.357,
+            "end": 43.939
+          },
+          {
+            "text": "watching,",
+            "start": 43.999,
+            "end": 44.721
+          },
+          {
+            "text": "and",
+            "start": 44.971,
+            "end": 45.524
+          },
+          {
+            "text": "see",
+            "start": 45.584,
+            "end": 46.168
+          },
+          {
+            "text": "you",
+            "start": 46.228,
+            "end": 46.72
+          }
+        ],
+        "fadeDurationOverride": null,
+        "lingerDurationOverride": null,
+        "positionOverride": null,
+        "colorOverride": null,
+        "backgroundColorOverride": null,
+        "fontSizeOverride": null
+      },
+      {
+        "id": "segment-11",
+        "start": 46.779998779296875,
+        "end": 48.29100036621094,
+        "text": "next month.",
+        "words": [
+          {
+            "text": "next",
+            "start": 46.78,
+            "end": 47.542
+          },
+          {
+            "text": "month.",
+            "start": 47.602,
+            "end": 48.291
+          }
+        ],
+        "fadeDurationOverride": null,
+        "lingerDurationOverride": null,
+        "positionOverride": null,
+        "colorOverride": null,
+        "backgroundColorOverride": null,
+        "fontSizeOverride": null
+      }
+    ],
+    "keyboardSegments": [],
+    "audioSegments": [],
+    "camera3dSegments": []
+  },
+  "captions": {
+    "segments": [
+      {
+        "id": "segment-0",
+        "start": 0.4,
+        "end": 4.8,
+        "text": "Welcome to the quarterly product update.",
+        "words": [
+          {
+            "text": "Welcome",
+            "start": 0.4,
+            "end": 1.122
+          },
+          {
+            "text": "to",
+            "start": 1.182,
+            "end": 1.731
+          },
+          {
+            "text": "the",
+            "start": 1.791,
+            "end": 2.342
+          },
+          {
+            "text": "quarterly",
+            "start": 2.402,
+            "end": 3.178
+          },
+          {
+            "text": "product",
+            "start": 3.238,
+            "end": 3.956
+          },
+          {
+            "text": "update.",
+            "start": 4.016,
+            "end": 4.8
+          }
+        ]
+      },
+      {
+        "id": "segment-1",
+        "start": 5.35,
+        "end": 9.118,
+        "text": "Today we will look at three",
+        "words": [
+          {
+            "text": "Today",
+            "start": 5.35,
+            "end": 6.035
+          },
+          {
+            "text": "we",
+            "start": 6.095,
+            "end": 6.631
+          },
+          {
+            "text": "will",
+            "start": 6.691,
+            "end": 7.216
+          },
+          {
+            "text": "look",
+            "start": 7.276,
+            "end": 7.861
+          },
+          {
+            "text": "at",
+            "start": 7.921,
+            "end": 8.451
+          },
+          {
+            "text": "three",
+            "start": 8.511,
+            "end": 9.118
+          }
+        ]
+      },
+      {
+        "id": "segment-2",
+        "start": 9.178,
+        "end": 9.842,
+        "text": "things.",
+        "words": [
+          {
+            "text": "things.",
+            "start": 9.178,
+            "end": 9.842
+          }
+        ]
+      },
+      {
+        "id": "segment-3",
+        "start": 13.842,
+        "end": 18.133,
+        "text": "First, the new editor makes trimming",
+        "words": [
+          {
+            "text": "First,",
+            "start": 13.842,
+            "end": 14.552
+          },
+          {
+            "text": "the",
+            "start": 14.802,
+            "end": 15.354
+          },
+          {
+            "text": "new",
+            "start": 15.414,
+            "end": 15.978
+          },
+          {
+            "text": "editor",
+            "start": 16.038,
+            "end": 16.662
+          },
+          {
+            "text": "makes",
+            "start": 16.722,
+            "end": 17.446
+          },
+          {
+            "text": "trimming",
+            "start": 17.506,
+            "end": 18.133
+          }
+        ]
+      },
+      {
+        "id": "segment-4",
+        "start": 18.193,
+        "end": 22.269,
+        "text": "a recording as easy as editing",
+        "words": [
+          {
+            "text": "a",
+            "start": 18.193,
+            "end": 18.701
+          },
+          {
+            "text": "recording",
+            "start": 18.761,
+            "end": 19.593
+          },
+          {
+            "text": "as",
+            "start": 19.653,
+            "end": 20.241
+          },
+          {
+            "text": "easy",
+            "start": 20.301,
+            "end": 20.902
+          },
+          {
+            "text": "as",
+            "start": 20.962,
+            "end": 21.551
+          },
+          {
+            "text": "editing",
+            "start": 21.611,
+            "end": 22.269
+          }
+        ]
+      },
+      {
+        "id": "segment-5",
+        "start": 22.329,
+        "end": 23.68,
+        "text": "a document.",
+        "words": [
+          {
+            "text": "a",
+            "start": 22.329,
+            "end": 22.836
+          },
+          {
+            "text": "document.",
+            "start": 22.896,
+            "end": 23.68
+          }
+        ]
+      },
+      {
+        "id": "segment-6",
+        "start": 24.23,
+        "end": 29.031,
+        "text": "Second, um, captions now export as",
+        "words": [
+          {
+            "text": "Second,",
+            "start": 24.23,
+            "end": 24.976
+          },
+          {
+            "text": "um,",
+            "start": 25.226,
+            "end": 25.733
+          },
+          {
+            "text": "captions",
+            "start": 25.983,
+            "end": 26.807
+          },
+          {
+            "text": "now",
+            "start": 26.867,
+            "end": 27.455
+          },
+          {
+            "text": "export",
+            "start": 27.515,
+            "end": 28.382
+          },
+          {
+            "text": "as",
+            "start": 28.442,
+            "end": 29.031
+          }
+        ]
+      },
+      {
+        "id": "segment-7",
+        "start": 29.091,
+        "end": 33.721,
+        "text": "subtitle files for YouTube and Vimeo.",
+        "words": [
+          {
+            "text": "subtitle",
+            "start": 29.091,
+            "end": 29.988
+          },
+          {
+            "text": "files",
+            "start": 30.048,
+            "end": 30.897
+          },
+          {
+            "text": "for",
+            "start": 30.957,
+            "end": 31.539
+          },
+          {
+            "text": "YouTube",
+            "start": 31.599,
+            "end": 32.392
+          },
+          {
+            "text": "and",
+            "start": 32.452,
+            "end": 33.006
+          },
+          {
+            "text": "Vimeo.",
+            "start": 33.066,
+            "end": 33.721
+          }
+        ]
+      },
+      {
+        "id": "segment-8",
+        "start": 34.271,
+        "end": 38.646,
+        "text": "Third, the transcript lets you fix",
+        "words": [
+          {
+            "text": "Third,",
+            "start": 34.271,
+            "end": 34.831
+          },
+          {
+            "text": "the",
+            "start": 35.081,
+            "end": 35.632
+          },
+          {
+            "text": "transcript",
+            "start": 35.692,
+            "end": 36.61
+          },
+          {
+            "text": "lets",
+            "start": 36.67,
+            "end": 37.347
+          },
+          {
+            "text": "you",
+            "start": 37.407,
+            "end": 37.9
+          },
+          {
+            "text": "fix",
+            "start": 37.96,
+            "end": 38.646
+          }
+        ]
+      },
+      {
+        "id": "segment-9",
+        "start": 38.706,
+        "end": 41.966,
+        "text": "any word the model mishurd.",
+        "words": [
+          {
+            "text": "any",
+            "start": 38.706,
+            "end": 39.248
+          },
+          {
+            "text": "word",
+            "start": 39.308,
+            "end": 39.868
+          },
+          {
+            "text": "the",
+            "start": 39.928,
+            "end": 40.48
+          },
+          {
+            "text": "model",
+            "start": 40.54,
+            "end": 41.159
+          },
+          {
+            "text": "mishurd.",
+            "start": 41.219,
+            "end": 41.966
+          }
+        ]
+      },
+      {
+        "id": "segment-10",
+        "start": 42.516,
+        "end": 46.72,
+        "text": "Thanks for watching, and see you",
+        "words": [
+          {
+            "text": "Thanks",
+            "start": 42.516,
+            "end": 43.297
+          },
+          {
+            "text": "for",
+            "start": 43.357,
+            "end": 43.939
+          },
+          {
+            "text": "watching,",
+            "start": 43.999,
+            "end": 44.721
+          },
+          {
+            "text": "and",
+            "start": 44.971,
+            "end": 45.524
+          },
+          {
+            "text": "see",
+            "start": 45.584,
+            "end": 46.168
+          },
+          {
+            "text": "you",
+            "start": 46.228,
+            "end": 46.72
+          }
+        ]
+      },
+      {
+        "id": "segment-11",
+        "start": 46.78,
+        "end": 48.291,
+        "text": "next month.",
+        "words": [
+          {
+            "text": "next",
+            "start": 46.78,
+            "end": 47.542
+          },
+          {
+            "text": "month.",
+            "start": 47.602,
+            "end": 48.291
+          }
+        ]
+      }
+    ],
+    "settings": {
+      "enabled": true,
+      "font": "System Sans-Serif",
+      "size": 24,
+      "color": "#FFFFFF",
+      "backgroundColor": "#000000",
+      "backgroundOpacity": 90,
+      "position": "bottom-center",
+      "italic": false,
+      "fontWeight": 700,
+      "outline": false,
+      "outlineColor": "#000000",
+      "exportWithSubtitles": false,
+      "highlightColor": "#FFFFFF",
+      "fadeDuration": 0.15,
+      "lingerDuration": 0.4,
+      "wordTransitionDuration": 0.25,
+      "activeWordHighlight": false,
+      "manualPosition": null,
+      "preset": "classic",
+      "animation": "bounce",
+      "highlightStyle": "color",
+      "uppercase": false,
+      "fillerLanguage": "en"
+    },
+    "sourceTimed": true
+  },
+  "keyboard": null,
+  "clips": [
+    {
+      "index": 0,
+      "offsets": {
+        "camera": 0.0,
+        "mic": 0.0,
+        "system_audio": 0.0
+      },
+      "offsetsAutoCalculated": true
+    }
+  ],
+  "annotations": [],
+  "screenMotionBlur": 1.0,
+  "screenMovementSpring": {
+    "stiffness": 200.0,
+    "damping": 40.0,
+    "mass": 2.25
+  },
+  "colorCorrection": {
+    "screen": {
+      "preset": "none",
+      "intensity": 1.0,
+      "exposure": 0.0,
+      "contrast": 0.0,
+      "saturation": 0.0,
+      "temperature": 0.0,
+      "tint": 0.0,
+      "fade": 0.0,
+      "splitTone": 0.0,
+      "vignette": 0.0,
+      "grain": 0.0
+    },
+    "camera": {
+      "preset": "none",
+      "intensity": 1.0,
+      "exposure": 0.0,
+      "contrast": 0.0,
+      "saturation": 0.0,
+      "temperature": 0.0,
+      "tint": 0.0,
+      "fade": 0.0,
+      "splitTone": 0.0,
+      "vignette": 0.0,
+      "grain": 0.0
+    },
+    "gradeCursor": true
+  },
+  "textSizeVersion": 1,
+  "textAnimVersion": 1
+}
