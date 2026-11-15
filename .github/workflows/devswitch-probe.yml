@@ -119,6 +119,7 @@ jobs:
             sleep "$1"; "$B/aggdev" destroy cap-test-mic-b; echo "unplugged at $1 s" >> "$OUT/unplug.log"
             sleep "$2"; "$B/aggdev" create "Cap Test Mic B" cap-test-mic-b; echo "replugged after $2 s" >> "$OUT/unplug.log"
           }
+          ( sleep 12; screencapture -x "$OUT/mid-run.png" ) &
           run main-instant "$B/main-baseline" --mode instant --duration 60 --mic "BlackHole 2ch"
           run branch-instant "$B/branch-baseline" --mode instant --duration 60 --mic "BlackHole 2ch"
           run branch-instant-switch "$B/branch-probe" --mode instant --duration 60 --mic "BlackHole 2ch" --switch-to "Cap Test Mic B" --switch-at 30
@@ -184,6 +185,7 @@ jobs:
             ${{ runner.temp }}/rec/*.log
             ${{ runner.temp }}/rec/*.csv
             ${{ runner.temp }}/rec/status
+            ${{ runner.temp }}/rec/*.png
 
   linux-camera:
     runs-on: ubuntu-24.04
@@ -228,7 +230,10 @@ jobs:
         env:
           DISPLAY: ":78"
         run: |
+          set +e
           set -uo pipefail
+          export LD_LIBRARY_PATH="$GITHUB_WORKSPACE/target/native-deps/lib:${LD_LIBRARY_PATH:-}"
+          ldd target/debug/examples/devswitch-camera-probe | grep "not found" || true
           out="$RUNNER_TEMP/camera-rec"
           ( sleep 26; kill "$(cat "$RUNNER_TEMP/feed-b.pid")"; echo "camera B feeder stopped"
             sleep 8
